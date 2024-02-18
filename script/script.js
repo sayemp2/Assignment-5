@@ -54,6 +54,7 @@ for (const sitBtn of allSit) {
 
 const applyBtn = document.getElementById('discount-btn');
 applyBtn.addEventListener('click', function () {
+    const discountInputSection = document.getElementById('discount-input');
     const cupon1 = document.getElementById('Cupon-code1').innerText;
     const cupon2 = document.getElementById('Cupon-code2').innerText;
     const inputCoupon = document.querySelector('#input-coupon').value;
@@ -71,7 +72,7 @@ applyBtn.addEventListener('click', function () {
             p2.innerText = discountPrice; 
             setElementValue('Grand-total', total - discountPrice);
 
-            console.log(discountPrice);
+            discountInputSection.style.display = 'none';
 
         }
         document.getElementById('input-coupon').value = ' ';
@@ -82,7 +83,7 @@ applyBtn.addEventListener('click', function () {
             p2.innerText = discountPrice; 
             setElementValue('Grand-total', total - discountPrice);
 
-            console.log(discountPrice);
+            discountInputSection.style.display = 'none';
 
         }
         document.getElementById('input-coupon').value = ' ';
